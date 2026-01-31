@@ -6,7 +6,7 @@
     "url": "https://alexalemi.com",
     "content": "My personal webpage. Mostly a sort of digital CV.",
     "tags": [
-      "_No response_"
+			"me"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "url": "https://blog.alexalemi.com",
     "content": "My personal blog with longer form articles, usually scientific in nature.",
     "tags": [
-      "blog"
+      "blog", "me"
     ]
   },
   {
