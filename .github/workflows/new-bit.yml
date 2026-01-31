@@ -113,7 +113,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/bits.json bits.html bits.xml
+          git add data/bits.json index.html bits.xml
           git commit -m "Add new bit: ${{ steps.parse-issue.outputs.bit_title || github.event.issue.title }}"
           git push
 

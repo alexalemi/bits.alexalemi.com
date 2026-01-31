@@ -5,16 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Add a new bit to your microblog. Fill in the fields below.
-
-  - type: input
-    id: title
-    attributes:
-      label: Title
-      description: A short title for this bit
-      placeholder: "Interesting paper on information theory"
-    validations:
-      required: true
+        Add a new bit to your microblog. The issue title will be used as the bit title.
 
   - type: input
     id: url
