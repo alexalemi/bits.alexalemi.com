@@ -7,12 +7,20 @@
     <description>Alex Alemi's Bits - Short thoughts, links, and finds</description>
     <language>en</language>
     <ns0:link href="https://bits.alexalemi.com/bits.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 31 Jan 2026 14:20:23 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Jan 2026 19:31:16 +0000</lastBuildDate>
     <image>
       <url>https://bits.alexalemi.com/favicon.ico</url>
       <title>Bits.AlexAlemi.com</title>
       <link>https://bits.alexalemi.com</link>
     </image>
+    <item>
+      <title>My personal blog</title>
+      <link>https://blog.alexalemi.com</link>
+      <description>My personal blog with longer form articles, usually scientific in nature.</description>
+      <guid isPermaLink="false">bits-my-personal-blog-1769887876685</guid>
+      <pubDate>Sat, 31 Jan 2026 00:00:00 -0400</pubDate>
+      <category>blog</category>
+    </item>
     <item>
       <title>Welcome to Bits</title>
       <link>https://bits.alexalemi.com#welcome-to-bits</link>
