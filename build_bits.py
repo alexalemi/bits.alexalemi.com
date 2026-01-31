@@ -119,7 +119,7 @@ def main():
     root = Path(__file__).parent
     bits_json = root / "data" / "bits.json"
     template_dir = root / "templates"
-    html_output = root / "bits.html"
+    html_output = root / "index.html"
     rss_output = root / "bits.xml"
 
     bits = load_bits(bits_json)
