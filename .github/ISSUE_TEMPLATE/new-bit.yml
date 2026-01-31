@@ -1,6 +1,5 @@
 name: New Bit
 description: Add a new bit to bits.alexalemi.com
-title: ""
 labels: ["new-bit"]
 body:
   - type: markdown
