@@ -7,12 +7,23 @@
     <description>Alex Alemi's Bits - Short thoughts, links, and finds</description>
     <language>en</language>
     <ns0:link href="https://bits.alexalemi.com/bits.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 31 Jan 2026 14:33:30 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Feb 2026 18:24:11 +0000</lastBuildDate>
     <image>
       <url>https://bits.alexalemi.com/favicon.ico</url>
       <title>Bits.AlexAlemi.com</title>
       <link>https://bits.alexalemi.com</link>
     </image>
+    <item>
+      <title>Tom Murphy's Do the Math Blog</title>
+      <link>https://dothemath.ucsd.edu/</link>
+      <description>Has had a huge influence on my worldview.</description>
+      <guid isPermaLink="false">bits-tom-murphy-s-do-the-math-blog-1769988251209</guid>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 -0400</pubDate>
+      <category>blog</category>
+      <category>influence</category>
+      <category>worldview</category>
+      <category>tom-murphy</category>
+    </item>
     <item>
       <title>My personal website</title>
       <link>https://alexalemi.com</link>

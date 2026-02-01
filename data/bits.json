@@ -1,12 +1,25 @@
 [
   {
+    "title": "Tom Murphy's Do the Math Blog",
+    "url": "https://dothemath.ucsd.edu/",
+    "content": "Has had a huge influence on my worldview.",
+    "tags": [
+      "blog",
+      "influence",
+      "worldview",
+      "tom-murphy"
+    ],
+    "id": "tom-murphy-s-do-the-math-blog-1769988251209",
+    "date": "2026-02-01"
+  },
+  {
     "id": "my-personal-website-1769887956804",
     "title": "My personal website",
     "date": "2026-01-31",
     "url": "https://alexalemi.com",
     "content": "My personal webpage. Mostly a sort of digital CV.",
     "tags": [
-			"me"
+      "me"
     ]
   },
   {
@@ -16,7 +29,8 @@
     "url": "https://blog.alexalemi.com",
     "content": "My personal blog with longer form articles, usually scientific in nature.",
     "tags": [
-      "blog", "me"
+      "blog",
+      "me"
     ]
   },
   {
