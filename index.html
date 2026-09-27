@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>bits.alexalemi.com</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,49 +20,50 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">
+		<meta name="theme-color" content="#fefefe" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#16171F" media="(prefers-color-scheme: dark)">
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="bits.AlexAlemi.com" href="https://bits.alexalemi.com/bits.xml" />
 
     <!-- Search Engine -->
     <meta name="description" content="Alex Alemi's Bits - Short thoughts, links, and finds">
-    <meta name="image" content="https://alexalemi.com/images/me_small.jpg">
+    <link rel="canonical" href="https://bits.alexalemi.com/">
 
-    <!-- Schema.org for Google -->
-    <meta itemprop="name" content="bits.alexalemi.com">
-    <meta itemprop="description" content="Alex Alemi's Bits - Short thoughts, links, and finds">
-    <meta itemprop="image" content="https://alexalemi.com/images/me_small.jpg">
+    <!-- Open Graph (Facebook, LinkedIn, Slack, Bluesky, ...) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alex Alemi's Bits">
+    <meta property="og:description" content="Alex Alemi's Bits - Short thoughts, links, and finds">
+    <meta property="og:url" content="https://bits.alexalemi.com/">
+    <meta property="og:site_name" content="bits.alexalemi.com">
+    <meta property="og:image" content="https://alexalemi.com/assets/images/me_small.jpg">
+    <meta property="og:image:alt" content="Headshot of Alex Alemi">
 
-    <!-- Twitter -->
+    <!-- Twitter / X (falls back to og:* for title, description, image) -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="bits.alexalemi.com">
-    <meta name="twitter:description" content="Alex Alemi's Bits - Short thoughts, links, and finds">
-    <meta name="twitter:creator" content="alemi">
-    <meta name="twitter:image:src" content="https://alexalemi.com/images/me_small.jpg">
+    <meta name="twitter:creator" content="@alemi">
 
-    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta name="og:title" content="bits.alexalemi.com">
-    <meta name="og:description" content="Alex Alemi's Bits - Short thoughts, links, and finds">
-    <meta name="og:image" content="https://alexalemi.com/images/me_small.jpg">
-    <meta name="og:url" content="https://bits.alexalemi.com">
-    <meta name="og:site_name" content="bits.alexalemi.com">
-    <meta name="og:type" content="website">
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Alex Alemi's Bits",
+      "description": "Short thoughts, links, and finds",
+      "url": "https://bits.alexalemi.com/",
+      "author": { "@type": "Person", "name": "Alexander A. Alemi", "url": "https://alexalemi.com/" }
+    }
+    </script>
+
+    <!-- Prerender same-origin links on hover -->
+    <script type="speculationrules">
+    { "prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }] }
+    </script>
 
     <!-- Fonts -->
-    <script type="text/javascript">
-        WebFontConfig = {
-            google: { families: [ 'Muli', 'Lato' ] }
-        };
-        (function() {
-            var wf = document.createElement('script');
-            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-        })();
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Mulish:wght@700&display=swap">
 
     <!-- Inline CSS -->
     <link rel="stylesheet" type="text/css" href="assets/style.css"/>
@@ -71,7 +71,7 @@
       .bit {
         margin-bottom: 1.5em;
         padding-bottom: 1em;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--rule-color);
       }
       .bit:last-child {
         border-bottom: none;
@@ -94,7 +94,7 @@
         font-size: 0.8em;
       }
       .bit-tags span {
-        background: #f0f0f0;
+        background: var(--chip-color);
         padding: 0.1em 0.4em;
         border-radius: 3px;
         margin-right: 0.3em;
@@ -111,23 +111,22 @@
     <!-- Header with social links -->
     <header>
         <h1 style="margin-top: 0px; margin-bottom: 4px">Alex Alemi's Bits</h1>
-        <nav>
-          <a href='https://bits.alexalemi.com' />Bits</a> |
-          <a href='https://blog.alexalemi.com' />Blog</a> |
-          <a href='https://alexalemi.com' />About Me</a> |
-          <a rel="alternate" type="application/rss+xml" title="bits.AlexAlemi.com" href="https://bits.alexalemi.com/bits.xml" />RSS</a>
+        <nav aria-label="Site">
+          <a href="https://bits.alexalemi.com" aria-current="page">Bits</a> |
+          <a href="https://blog.alexalemi.com">Blog</a> |
+          <a href="https://alexalemi.com">About Me</a> |
+          <a rel="alternate" type="application/rss+xml" title="bits.AlexAlemi.com" href="https://bits.alexalemi.com/bits.xml">RSS</a>
         </nav>
     </header>
 
-    <!-- Bio and stuff -->
     <main>
+      <!-- Bio and stuff -->
       <p>Short thoughts, interesting links, and things I've found.</p>
-    </main>
 
     <!--- Bits stream --->
     <div class="listing">
       
-        <div class="bit">
+        <article class="bit">
           
             <a class="bit-link" href="https://dothemath.ucsd.edu/" target="_blank" rel="noopener">Tom Murphy's Do the Math Blog</a>
           
@@ -137,7 +136,7 @@
           
 
           <div class="bit-meta">
-            <date>2026-02-01</date>
+            <time datetime="2026-02-01">2026-02-01</time>
             
             
               <span class="bit-tags">
@@ -153,9 +152,9 @@
               </span>
             
           </div>
-        </div>
+        </article>
       
-        <div class="bit">
+        <article class="bit">
           
             <a class="bit-link" href="https://alexalemi.com" target="_blank" rel="noopener">My personal website</a>
           
@@ -165,7 +164,7 @@
           
 
           <div class="bit-meta">
-            <date>2026-01-31</date>
+            <time datetime="2026-01-31">2026-01-31</time>
             
             
               <span class="bit-tags">
@@ -175,9 +174,9 @@
               </span>
             
           </div>
-        </div>
+        </article>
       
-        <div class="bit">
+        <article class="bit">
           
             <a class="bit-link" href="https://blog.alexalemi.com" target="_blank" rel="noopener">My personal blog</a>
           
@@ -187,7 +186,7 @@
           
 
           <div class="bit-meta">
-            <date>2026-01-31</date>
+            <time datetime="2026-01-31">2026-01-31</time>
             
             
               <span class="bit-tags">
@@ -199,9 +198,9 @@
               </span>
             
           </div>
-        </div>
+        </article>
       
-        <div class="bit">
+        <article class="bit">
           
             <span class="bit-link">Welcome to Bits</span>
           
@@ -211,7 +210,7 @@
           
 
           <div class="bit-meta">
-            <date>2026-01-30</date>
+            <time datetime="2026-01-30">2026-01-30</time>
             
             
               <span class="bit-tags">
@@ -221,9 +220,10 @@
               </span>
             
           </div>
-        </div>
+        </article>
       
     </div>
+    </main>
 
 		<footer>
 		<p>
