@@ -5,6 +5,7 @@ Build script for bits.alexalemi.com
 Generates:
 - bits.html: The main stream page
 - bits.xml: RSS feed for bits
+- sitemap.xml: Sitemap for the single page
 
 Usage:
     python build_bits.py
@@ -115,12 +116,29 @@ def build_rss(bits: list[dict], output_path: Path):
     print(f"Generated {output_path}")
 
 
+def build_sitemap(bits: list[dict], output_path: Path):
+    """Generate the sitemap, a single page last modified by the newest bit."""
+    lastmod = max((bit["date"] for bit in bits if bit.get("date")), default=None)
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        '  <url>',
+        '    <loc>https://bits.alexalemi.com/</loc>',
+    ]
+    if lastmod:
+        lines.append(f'    <lastmod>{lastmod}</lastmod>')
+    lines += ['  </url>', '</urlset>']
+    output_path.write_text('\n'.join(lines) + '\n')
+    print(f"Generated {output_path}")
+
+
 def main():
     root = Path(__file__).parent
     bits_json = root / "data" / "bits.json"
     template_dir = root / "templates"
     html_output = root / "index.html"
     rss_output = root / "bits.xml"
+    sitemap_output = root / "sitemap.xml"
 
     bits = load_bits(bits_json)
 
@@ -129,6 +147,7 @@ def main():
 
     build_html(bits, template_dir, html_output)
     build_rss(bits, rss_output)
+    build_sitemap(bits, sitemap_output)
 
 
 if __name__ == "__main__":
