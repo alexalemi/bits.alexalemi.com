@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/rss.xsl"?>
+<?xml-stylesheet type="text/css" href="assets/rss.css"?>
 <rss xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>Bits.AlexAlemi.com</title>
@@ -7,7 +7,7 @@
     <description>Alex Alemi's Bits - Short thoughts, links, and finds</description>
     <language>en</language>
     <ns0:link href="https://bits.alexalemi.com/bits.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 27 Sep 2026 08:29:13 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 09:14:44 +0000</lastBuildDate>
     <image>
       <url>https://bits.alexalemi.com/favicon.ico</url>
       <title>Bits.AlexAlemi.com</title>

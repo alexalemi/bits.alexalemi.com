@@ -109,7 +109,7 @@ def build_rss(bits: list[dict], output_path: Path):
     # Add stylesheet reference
     xml_content = xml_content.replace(
         '<?xml version="1.0" ?>',
-        '<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="assets/rss.xsl"?>'
+        '<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/css" href="assets/rss.css"?>'
     )
 
     output_path.write_text(xml_content)
