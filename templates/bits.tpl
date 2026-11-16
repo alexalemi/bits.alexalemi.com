@@ -27,8 +27,6 @@
     <meta property="og:description" content="Alex Alemi's Bits - Short thoughts, links, and finds">
     <meta property="og:url" content="https://bits.alexalemi.com/">
     <meta property="og:site_name" content="bits.alexalemi.com">
-    <meta property="og:image" content="https://alexalemi.com/assets/images/me_small.jpg">
-    <meta property="og:image:alt" content="Headshot of Alex Alemi">
 
     <!-- Twitter / X (falls back to og:* for title, description, image) -->
     <meta name="twitter:card" content="summary">
